@@ -28,7 +28,6 @@ def generate_next_sentence(prompt, max_length=50):
         eos_token_id=tokenizer.eos_token_id
     )
     full_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-
     next_part = full_text[len(prompt):].strip()
     return next_part
 
